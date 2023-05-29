@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logoylogin',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./logoylogin.component.css']
 })
 export class LogoyloginComponent {
+  constructor(private router: Router){
 
+  }
+
+  login(){
+    this.router.navigate(['/login'])
+  }
 }
