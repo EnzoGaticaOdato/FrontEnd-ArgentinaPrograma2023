@@ -1,51 +1,31 @@
-<!-- <div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" >
-    <h1>Educacion</h1>
-    <div clas="lg-2">
-      <button type="button" class="btn btn-light" routerLink="/nuevaedu"*ngIf="isLogged">
-          Agregar educacion
+<div class="row">
+  <h1>Educacion</h1>
+  <div class="col-lg-2">
+      <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+          Agregar Educacion
       </button>
-    </div>
-  
-      <div class="col lg 1"></div>
-      <div col="lg-11">
-        <table class="table">
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+      <table class="table">
           <tbody>
-            <tr *ngFor="let Educacion of educacion">
-              <td>{{Educacion.nombreE}}</td>
-              <td>{{Educacion.descripcionE}}</td>
-              <td *ngIf="isLogged">
-                <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i>EDITAR</button>
-              </td>
-              <td *ngIf="isLogged">
-                <button class="btn btn-light" (click)="delete(Educacion.id)"><i class="bi bi-trash"></i>BORRAR</button>
-              </td>
-            </tr>
+              <tr *ngFor="let Educacion of educacion">
+                  <td>
+                      <h2>{{Educacion.nombreE}}</h2>
+                  </td>
+                  <td>{{Educacion.descripcionE}}</td>
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                  </td>
+                  <td *ngIf="isLogged">
+                      <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                          <i class="bi bi-trash-fill"></i> BORRAR</button>
+                  </td>
+              </tr>
           </tbody>
       </table>
-      </div>
-  
-    </div>
-  </div> -->
-
-  <div class="row">
-    <h1>Educacion</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-      <ul>
-        <li><h1>Estudio 1 - x years</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa tempora harum obcaecati perspiciatis sequi, dolorum maxime tempore voluptatum consequuntur, accusamus nulla ipsum veritatis cupiditate, dolores provident repudiandae voluptate fugiat voluptatem!</p>
-        </li>
-      </ul>
-      <ul>
-        <li><h1>Estudio 2 - x years</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa tempora harum obcaecati perspiciatis sequi, dolorum maxime tempore voluptatum consequuntur, accusamus nulla ipsum veritatis cupiditate, dolores provident repudiandae voluptate fugiat voluptatem!</p>
-        </li>
-      </ul>
-      <ul>
-        <li><h1>Estudio 3 - x years</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa tempora harum obcaecati perspiciatis sequi, dolorum maxime tempore voluptatum consequuntur, accusamus nulla ipsum veritatis cupiditate, dolores provident repudiandae voluptate fugiat voluptatem!</p>
-        </li>
-      </ul>
-    </div>
   </div>
+
+</div>
