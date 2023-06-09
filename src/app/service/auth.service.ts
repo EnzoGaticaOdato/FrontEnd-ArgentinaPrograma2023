@@ -9,7 +9,9 @@ import { LoginUsuario } from '../model/login-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://backend-enzogaticaodato.onrender.com/auth/';
+  
+  //authURL = 'http://localhost:8080/auth/';
   constructor(private httpCllient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{
