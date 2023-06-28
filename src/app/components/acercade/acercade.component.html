@@ -1,6 +1,8 @@
 <div class="row" id="about">
+    
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-      <img src="../../../assets/FotoEnzo.jpg" class="img-fluid" id="fotoperfil">
+      <img src="{{persona.img}}" class="img-fluid" id="fotoperfil">
     </div>
 
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -9,10 +11,15 @@
           <h2 id="nombre"> {{persona.nombre}} {{persona.apellido}} </h2>
           <p>Full Stack Developer Jr</p>
 
-        <p >
-          Tengo 19 años actualmente. Vivo en Chivilcoy, Provincia de Buenos Aires. Actualmente me encuentro estudiante el primer
-          año de la carrera de "Tecnicatura en programacion" en la UTN (sede en chivilcoy). Apasionado por los juegos, la programacion y la vida digital.</p>
+        <p > {{persona.descripcion}}</p>
         </div>
 
     </div>
+
+    <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+      Editar persona
+    </button>
   </div>
+
+  <!--Tengo 19 años actualmente. Vivo en Chivilcoy, Provincia de Buenos Aires. Actualmente me encuentro estudiante el primer
+          año de la carrera de "Tecnicatura en programacion" en la UTN (sede en chivilcoy). Apasionado por los juegos, la programacion y la vida digital.-->

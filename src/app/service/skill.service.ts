@@ -7,8 +7,8 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  sURL = 'https://backend-enzogaticaodato.onrender.com/skill/';
-  //sURL = 'http://localhost:8080/skill/';
+  //sURL = 'https://backend-enzogaticaodato.onrender.com/skill/';
+  sURL = 'http://localhost:8080/skill/';
 
   constructor(private httpClient: HttpClient) { }
 
