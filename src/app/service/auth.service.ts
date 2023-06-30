@@ -4,14 +4,14 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 import { Observable } from 'rxjs';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  //authURL = 'https://backend-enzogaticaodato.onrender.com/auth/';
+  authURL = environment.URL + 'auth/';
   
-  authURL = 'http://localhost:8080/auth/';
   constructor(private httpCllient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario):Observable<any>{
